@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> <%=VendorData.shopName%></title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="/AdminAssets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/AdminAssets/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="/AdminAssets/css/_all-skins.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.bootstrap.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body class="hold-transition sidebar-mini skin-black-light">
+  <div class="wrapper">
+    <!-- header -->
+    <header class="main-header">
+      <a href="/vendor/dashboard" class="logo">
+        <span class="logo-mini">
+          <b>
+            <%=VendorData.shopName%>
+          </b>
+        </span>
+        <span class="logo-lg">
+          <b>
+            <%=VendorData.shopName%>
+          </b>
+        </span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="/AdminAssets/img/avatar5.png" class="user-image" alt="User Image">
+                <span class="hidden-xs"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-header">
+                  <img src="/AdminAssets/img/avatar5.png" class="img-circle" alt="User Image">
+                  <p>
+                    <%=VendorData.shopName%>
+                  </p>
+                </li>
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- sidebar Start -->
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="/vendor/dashboard">
+              <i class="fa fa-circle-o text-red"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vendor/products">
+              <i class="fa fa-circle-o text-purple"></i>
+              <span>Products</span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-circle-o text-purple"></i>
+              <span>Order</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+              <li>
+                <a href="/admin/catagory">
+                  <i class="fa fa-circle-o text-purple"></i>
+                  <span>Catagories</span>
+                </a>
+              </li>
+              <li>
+                <a href="/admin/products">
+                  <i class="fa fa-circle-o text-green"></i>
+                  <span>Products</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-circle-o text-purple"></i>
+              <span>Report</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu" style="display: none;">
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o text-purple"></i>
+                  <span>Product List</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o text-purple"></i>
+                  <span>Client List</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-circle-o text-purple"></i>
+                  <span>Sales Report</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+      </section>
+      <!-- SideBar End -->
+    </aside>
+    <!-- Content -->
+    <div class="content-wrapper">
+      <section class="content">
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-info">
+              <div class="box box-info">
+                <div class="box-header">

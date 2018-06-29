@@ -1,0 +1,63 @@
+<%-include('./menu/header')%>
+    <center>
+        <h3>Vendor List</h3>
+    </center>
+    <a href="/admin/vendor/addVendor" style="margin-top: -51px" class="btn btn-success pull-right btn-sm">Add Vendor</a>
+    <%if(vendorDatas!=''){%>
+        <table class="table table-hover viewTable table-responsive" style="width:100%">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Vendor Name</th>
+                    <th scope="col">Shop Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%i=1%>
+                    <%vendorDatas.forEach(function(vendor) {%>
+                        <tr>
+                            <th scope="row">
+                                <%=i++%>
+                            </th>
+                            <td>
+                                <%=vendor.vendorName%>
+                            </td>
+                            <td>
+                                <%=vendor.shopName%>
+                            </td>
+                            <td>
+                                <%=vendor.address%>
+                            </td>
+                            <td>
+                                <%=vendor.mobile%>
+                            </td>
+                            <td>
+                                <%=vendor.email%>
+                            </td>
+                            <td>
+                                <%if(vendor.status=='1'){%> Approved
+                                    <%}else{%> DisApproved
+                                        <%}%>
+                            </td>
+                            <td>
+                                <a href="/admin/vendor/<%=vendor._id%>" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <%})%>
+            </tbody>
+        </table>
+        <%}else{%>
+            <blockquote>
+                <p>No Vendor till now added!!</p>
+            </blockquote>
+            <%}%>
+
+
+                <%-include('./menu/footer')%>

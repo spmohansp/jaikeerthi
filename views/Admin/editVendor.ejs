@@ -1,0 +1,89 @@
+<%-include('./menu/header')%>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <center>
+        <h3>Edit Vendor</h3>
+    </center>
+    <form role="form" action="/admin/vendor/<%=vendorData._id%>" method="POST">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Vendor Name :</label>
+                <input class="form-control" type="text" value="<%=vendorData.vendorName%>" name="vendorName" placeholder="Enter Vendor Name"
+                    required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Shop Name:</label>
+                <input class="form-control" type="text" value="<%=vendorData.shopName%>" name="shopName" placeholder="Enter Shop Name" required>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Address</label>
+                <textarea class="form-control" placeholder="Enter Address" name="address" required><%=vendorData.address%></textarea>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <input type="checkbox" data-toggle="toggle" name="status" data-on="Approved" data-off="DisApprove" hidden <%if(vendorData.status=='1'
+                    ){%> checked
+                <%}%>>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Mobile :</label>
+                <input class="form-control" type="text" name="mobile" minlength="10" maxlength="10" value="<%=vendorData.mobile%>" placeholder="Enter Mobile Number"
+                    required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>GST Number:</label>
+                <input class="form-control" type="text" name="gstNumber" value="<%=vendorData.gstNumber%>" placeholder="Enter GST Number">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Bank Name :</label>
+                <input class="form-control" type="text" name="bankName" value="<%=vendorData.bankName%>" placeholder="Enter Bank Name">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>IFSC Code:</label>
+                <input class="form-control" type="text" name="ifscCode" value="<%=vendorData.ifscCode%>" placeholder="Enter IFSC Code">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Account Name :</label>
+                <input class="form-control" type="text" name="accountNumber" value="<%=vendorData.accountNumber%>" placeholder="Enter Bank Account Number">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Email Id:</label>
+                <input class="form-control" type="email" name="email" value="<%=vendorData.email%>" placeholder="Enter Vendor E-mail" required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Password:</label>
+                <input class="form-control" type="text" name="Password" placeholder="Enter Default Password">
+            </div>
+        </div>
+        <br>
+        <div align="center">
+            <input type="submit" class="btn btn-info" value="Update Vendor">
+        </div>
+    </form>
+
+    <script>
+        $(function () {
+            $('#toggle-two').bootstrapToggle({
+                on: 'Enabled',
+                off: 'Disabled'
+            });
+        })
+    </script>
+
+    <%-include('./menu/footer')%>

@@ -1,0 +1,61 @@
+<%-include('./menu/header')%>
+    <center>
+        <h3>Dashboard</h3>
+    </center>
+    <hr>
+    <div class="row">
+        <div class="col-xs-7">
+            <div class="panel-body">
+                <div class="panel panel-info">
+                    <div class="panel-body">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- pannel starts -->
+        <div class="col-xs-5 col-md-5 col-sm-5">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Products</h1>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-6 col-md-6 col-sm-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">Approved Products</h1>
+                            </div>
+                            <div class="panel-body">
+                                <center>
+                                    <h3>
+                                        <%=ApprovedproductCount%>
+                                    </h3>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-md-6 col-sm-6">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h1 class="panel-title">unApproved Products</h1>
+                            </div>
+                            <div class="panel-body">
+                                <center>
+                                    <h3>
+                                        <%=unApprovedproductCount%>
+                                    </h3>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- pannel ends  -->
+    </div>
+    <%-include('./menu/footer')%>

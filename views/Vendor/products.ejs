@@ -1,0 +1,66 @@
+<%-include('./menu/header')%>
+    <center>
+        <h3>Products</h3>
+    </center>
+    <a href="/vendor/products/addProducts" style="margin-top: -51px" class="btn btn-success pull-right btn-sm">Add Products</a>
+    <%if(ProductList!=''){%>
+        <table class="table table-hover viewTable table-responsive" style="width:100%">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Products Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Catagory</th>
+                    <th scope="col">Offer</th>
+                    <th scope="col">Images</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%i=1%>
+                    <%ProductList.forEach(function(product) {%>
+                        <tr>
+                            <th scope="row">
+                                <%=i++%>
+                            </th>
+                            <td>
+                                <%=product.productName%>
+                            </td>
+                            <td>
+                                <%=product.price%>
+                            </td>
+                            <td>
+                                <%=product.quantity%>
+                            </td>
+                            <td>
+                                <%=product.catagory.catagory%>
+                            </td>
+                            <td>
+                                <%if(product.offerDate){%> Offer
+                                    <%}%>
+                            </td>
+                            <td>
+                                <img src="/productImage/<%=product.productImage%>" alt="Smiley face" height="50" width="50">
+                            </td>
+                            <td>
+                                <%if(product.status=='1'){%> Approved
+                                    <%}else{%> Awaiting Approval
+                                        <%}%>
+                            </td>
+                            <td>
+                                <a href="/vendor/products/<%=product._id%>" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <%})%>
+            </tbody>
+        </table>
+        <%}else{%>
+            <blockquote>
+                <p>No Products till now added!!</p>
+            </blockquote>
+            <%}%>
+                <%-include('./menu/footer')%>

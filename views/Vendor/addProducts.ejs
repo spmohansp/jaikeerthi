@@ -1,0 +1,76 @@
+<%-include('./menu/header')%>
+    <center>
+        <h3>Add Products</h3>
+    </center>
+    <form role="form" action="/vendor/products/addProducts" method="POST" enctype='multipart/form-data'>
+
+        <input class="form-control" type="hidden" name="vendorId" value="<%=vendorData%>" required>
+
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Product Name:</label>
+                <input class="form-control" type="text" name="productName" placeholder="Enter Product Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Price:</label>
+                <input class="form-control" type="number" min="0" name="price" placeholder="Enter Product Price" required>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Discription:</label>
+                <textarea class="form-control" placeholder="Enter Product Discription" name="discription" required></textarea>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Product Image:</label>
+                <input class="form-control" type="file" name="productImage" placeholder="Enter Product Image" required>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Total Quantity :</label>
+                <input class="form-control" type="number" name="quantity" min="0" placeholder="Enter Product Quantity" required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Catagory Type</label>
+                <select name="catagory" class="form-control" required>
+                    <option value="">Select Catagory</option>
+                    <%catagoryData.forEach(function(catagory) {%>
+                        <option value="<%=catagory._id%>">
+                            <%=catagory.catagory%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Offer Till Date :</label>
+                <input class="form-control" type="date" name="offerDate" placeholder="Enter Offer Date">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Offer Price :</label>
+                <input class="form-control" type="number" min="0" name="offerPrice" placeholder="Enter Offer Price">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div align="center">
+            <input type="submit" class="btn btn-info" value="submit">
+            <input type="reset" class="btn btn-info" value="clear">
+        </div>
+    </form>
+
+    <script>
+        $(function () {
+            $('#toggle-two').bootstrapToggle({
+                on: 'Enabled',
+                off: 'Disabled'
+            });
+        })
+    </script>
+    <%-include('./menu/footer')%>

@@ -1,0 +1,73 @@
+<%-include('./menu/header')%>
+    <center>
+        <h3>Add Vendor</h3>
+    </center>
+    <form role="form" action="/admin/vendor/addVendor" method="POST">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Vendor Name :</label>
+                <input class="form-control" type="text" name="vendorName" placeholder="Enter Vendor Name" required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Shop Name:</label>
+                <input class="form-control" type="text" name="shopName" placeholder="Enter Shop Name" required>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Address</label>
+                <textarea class="form-control" placeholder="Enter Address" name="address" required></textarea>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Mobile :</label>
+                <input class="form-control" type="text" name="mobile" minlength="10" maxlength="10" placeholder="Enter Mobile Number" required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>GST Number:</label>
+                <input class="form-control" type="text" name="gstNumber" placeholder="Enter GST Number">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Bank Name :</label>
+                <input class="form-control" type="text" name="bankName" placeholder="Enter Bank Name">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>IFSC Code:</label>
+                <input class="form-control" type="text" name="ifscCode" placeholder="Enter IFSC Code">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Account Name :</label>
+                <input class="form-control" type="text" name="accountNumber" placeholder="Enter Bank Account Number">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Email Id:</label>
+                <input class="form-control" type="email" name="email" placeholder="Enter Vendor E-mail" required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Password:</label>
+                <input class="form-control" type="text" name="Password" value="password@123" placeholder="Enter Default Password" required>
+            </div>
+        </div>
+        <br>
+        <div align="center">
+            <input type="submit" class="btn btn-info" value="submit">
+            <input type="reset" class="btn btn-info" value="clear">
+        </div>
+    </form>
+    <%-include('./menu/footer')%>

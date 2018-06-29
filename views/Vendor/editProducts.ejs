@@ -1,0 +1,67 @@
+<%-include('./menu/header')%>
+    <center>
+        <h3>Edit Products</h3>
+    </center>
+    <form role="form" action="/vendor/products/addProducts/<%=ProductList._id%>" method="POST" enctype='multipart/form-data'>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Product Name:</label>
+                <input class="form-control" type="text" name="productName" value="<%=ProductList.productName%>" placeholder="Enter Product Name"
+                    required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Price:</label>
+                <input class="form-control" type="number" min="0" name="price" value="<%=ProductList.price%>" placeholder="Enter Product Price"
+                    required>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Discription:</label>
+                <textarea class="form-control" placeholder="Enter Product Discription" name="discription" required><%=ProductList.discription%></textarea>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Product Image:</label>
+                <input class="form-control" type="file" name="productImage" placeholder="Enter Product Image">
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Total Quantity :</label>
+                <input class="form-control" type="number" name="quantity" value="<%=ProductList.quantity%>" min="0" placeholder="Enter Product Quantity"
+                    required>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Catagory Type</label>
+                <select name="catagory" class="form-control" required>
+                    <option value="">Select Catagory</option>
+                    <%catagoryData.forEach(function(catagory) {%>
+                        <option value="<%=catagory._id%>" <%if((catagory.id)==ProductList.catagory){%> selected
+                            <%}%> >
+                                <%=catagory.catagory%>
+                        </option>
+                        <%})%>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Offer Till Date :</label>
+                <input class="form-control" type="date" name="offerDate" value="<%=ProductList.offerDate%>" placeholder="Enter Offer Date">
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <label>Offer Price :</label>
+                <input class="form-control" type="number" min="0" value="<%=ProductList.offerPrice%>" name="offerPrice" placeholder="Enter Offer Price">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div align="center">
+            <input type="submit" class="btn btn-info" value="submit">
+            <input type="reset" class="btn btn-info" value="clear">
+        </div>
+    </form>
+    <%-include('./menu/footer')%>

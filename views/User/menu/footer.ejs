@@ -1,0 +1,158 @@
+<div class="footer">
+	<div class="container">
+		<div class="col-md-3 footer-grid">
+			<h3>About Us</h3>
+			<p>We make sure that the products are timely delivered at our clients place.</p>
+		</div>
+		<div class="col-md-3 footer-grid ">
+			<h3>Menu</h3>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="kitchen.html">Kitchen</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grid ">
+			<h3>Customer Services</h3>
+			<ul>
+				<li><a href="shipping.html">Shipping</a></li>
+				<li><a href="terms.html">Terms & Conditions</a></li>
+				<li><a href="faqs.html">Faqs</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grid">
+			<h3>My Account</h3>
+			<ul>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+			<div class="footer-bottom">
+				<h2 ><a href="/"><b>J<br>A<br>I</b>Keerthi Enterprises<span>The Best market</span></a></h2>
+				<!-- <p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p> -->
+				<ul class="social-fo">
+					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<!-- <li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li> -->
+					<!-- <li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> -->
+				</ul>
+				<div class=" address">
+					<div class="col-md-4 fo-grid1">
+							<p><i class="fa fa-home" aria-hidden="true"></i>Tiruchengode</p>
+					</div>
+					<div class="col-md-4 fo-grid1">
+							<p><i class="fa fa-phone" aria-hidden="true"></i>+91 7894561230</p>	
+					</div>
+					<div class="col-md-4 fo-grid1">
+						<p><a href="mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
+					</div>
+					<div class="clearfix"></div>
+					
+					</div>
+			</div>
+		<div class="copy-right">
+			<p> &copy; 2018 . All Rights Reserved | Design by  <a href="https://www.greefitech.com"> Greefi Technology</a></p>
+		</div>
+	</div>
+</div>
+<!-- //footer-->
+
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+<!-- for bootstrap working -->
+		<script src="/UserAssets/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<script type='text/javascript' src="/UserAssets/js/jquery.mycart.js"></script>
+  <script type="text/javascript">
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      affixCartIcon: true,
+      checkoutCart: function(products) {
+        $.each(products, function(){
+          console.log(this);
+        });
+      },
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      getDiscountPrice: function(products) {
+        var total = 0;
+        $.each(products, function(){
+          total += this.quantity * this.price;
+        });
+        return total * 1;
+      }
+    });
+
+  });
+  </script>
+				
+
+
+				<!-- product -->
+			<div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content modal-info">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+						</div>
+						<div class="modal-body modal-spa">
+								<div class="col-md-5 span-2">
+											<div class="item">
+												<img src="/UserAssets/images/of23.png" class="img-responsive" alt="">
+											</div>
+								</div>
+								<div class="col-md-7 span-1 ">
+									<h3>Gel(150 g)</h3>
+									<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+									<div class="price_single">
+									  <span class="reducedfrom "><del>$1.00</del>$0.80</span>
+									
+									 <div class="clearfix"></div>
+									</div>
+									<h4 class="quick">Quick Overview:</h4>
+									<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+									 <div class="add-to">
+										   <button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="24" data-name="Gel" data-summary="summary 24" data-price="0.80" data-quantity="1" data-image="images/of23.png">Add to Cart</button>
+										</div>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+</body>
+
+</html>
